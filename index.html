@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="phaser.min.js"></script>
+    <script src="Midi.min.js"></script>
+    <script src="Tone.min.js"></script>
+    <script src="StartAudioContext.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="load_demo()" style="background: #000; margin: 0;">
+
+    <div id="controls">
+        <div class="image-upload">
+          <label for="filereader">
+            <img src="upload.png"/>
+        </label>
+
+        <input disabled id="filereader" onchange="read_file(event)" type="file" accept=".mid" />
+    </div>
+
+    <button disabled id="welcome" onclick="playpause()" style="margin-left: 3vw;">
+        <img id="playpausebtn" src="play.png">
+    </button>
+
+    <button disabled id="rw" onclick="slowdown()" style="margin-left: 3vw;">
+        <img src="rw.png">
+    </button>
+
+    <button disabled id="reset" onclick="reset_speed()">
+        <!-- <img src="reset.png"> -->
+        <span id="speed" style="padding: 0px 8px;">1.0</span>
+    </button>
+    <button disabled id="ff" onclick="speedup()">
+        <img src="ff.png">
+    </button>
+
+    <button disabled id="pm" style="margin-left: 3vw;" onclick="fn_place_marker()">
+        <img src="pm.png">
+    </button>
+
+    <button disabled id="cm" onclick="fn_clear_marker()">
+        <img src="cm.png">
+    </button>
+
+    <button disabled id="fs" style="margin-left: 3vw;">
+        <img src="fs.png">
+    </button>
+
+</div>
+<div id="phaser-example"></div>
+<script src="external2.js"></script>
+</body>
+</html>
