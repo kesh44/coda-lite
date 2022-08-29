@@ -28,7 +28,7 @@ button:focus-visible {
 
 .image-upload {
 	background-color: #555;
-	display: inline;
+	display: none;
 	height: 100%;
 }
 
